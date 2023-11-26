@@ -1,0 +1,79 @@
+html {
+  font-family: 'Poppins', sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the rgba values to control the opacity and color */
+  z-index: -1;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  /* background-image: url('image3.jpg'); */
+  background-image: url('image4.jpg');
+  background-size: 100%;
+  /* background-repeat: no-repeat; */
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+/* Add this CSS to your stylesheet or style tag */
+/* .hover-link {
+  -webkit-text-stroke:0.1px white;
+  -webkit-text-stroke-color: white;
+} */
+.hover-link:hover {
+  color: white;
+  /* background-color: transparent; */
+}
+
+.underline-animation {
+  position: relative;
+  transition: all 0.5s ease; /* This sets the animation duration to 0.5 seconds */
+}
+
+.underline-animation::before {
+  content: "";
+  position: absolute;
+  bottom: -1px; /* Adjust the distance of the underline from the text */
+  left: 0;
+  width: 0;
+  height: 2px; /* Adjust the thickness of the underline */
+  background-color: #000000; /* Adjust the color of the underline */
+  transition: width 0.5s ease; /* This sets the width transition duration to 0.5 seconds */
+}
+
+.underline-animation:hover::before {
+  width: 100%; /* This makes the underline grow to 100% width on hover */
+}
+
